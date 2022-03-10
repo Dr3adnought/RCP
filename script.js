@@ -53,10 +53,17 @@ switch (color) {
 
 
         // Generate a random valid color hex code
-        // HEX code
+        // HEX colors, like all other computer colors, start with RGB
+        // How does that break down?
         // - starts with a #
         // - 6 characters after the #
         // - each of the 6 char's are 0 1 2 3 4 5 6 7 8 9 A B C D E F
+        // - three sets of 2 characters
+        // - each RGB has a range of 0-255, so 256^3 or 16,777,216
+        // - each letter is determined by hex divisor
+        // - i.e 160 / 16 = 10, which is 9 on hex, so first number would be 9
+        // - if was 165 / 16, would be 10.3125, so broken up to 10 (9) and .3125 (or 2).
+        // - so first two numbers would be 92
 
     default:
         alert("Sorry, that is not a rainbow color!")
